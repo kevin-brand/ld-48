@@ -10,7 +10,7 @@ namespace Bombs
         [SerializeField] private BombData defaultBomb;
         [SerializeField] private BombData bombOne;
         [SerializeField] private BombData bombTwo;
-
+        [SerializeField] private LayerMask cantPlaceOn;
         private int _bombOneHeld;
         private int _bombTwoHeld;
         
@@ -38,22 +38,32 @@ namespace Bombs
 
         private void AttemptToPlaceBomb(BombData bombData)
         {
-            Bomb bomb = Instantiate(bombPrefab, transform.position, Quaternion.identity);
-            bomb.Place(GetNearestValidPlacingPosition(), bombData);
+            Vector2 targetLocation = new Vector2();
+
+            if (AttemptToGetAndSetNearestValidPlacingPosition(ref targetLocation))
+            {
+                Bomb bomb = Instantiate(bombPrefab);
+                bomb.Place(targetLocation, bombData);
+                return;
+            }
+            
+            Debug.Log("CAN'T PLACE A BOMB HERE");
         }
 
-        private Vector2 GetNearestValidPlacingPosition()
+        private bool AttemptToGetAndSetNearestValidPlacingPosition(ref Vector2 v)
         {
             float x = Mathf.RoundToInt(transform.position.x);
             float y = Mathf.RoundToInt(transform.position.y);
 
             Vector2 nearestPoint = new Vector2(x, y);
+
+            if (Physics2D.OverlapPoint(nearestPoint, cantPlaceOn) == null)
+            {
+                v = nearestPoint;
+                return true;
+            }
             
-            if(Physics2D.OverlapPoint(nearestPoint) == null)
-                return nearestPoint;
-
-            return nearestPoint;
-
+            return false;
         }
     }
 }
