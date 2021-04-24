@@ -6,6 +6,8 @@ namespace Character.FSM.States.SuperStates
     {
         protected float MoveInput;
         private bool _jumpInput;
+
+        private bool _isGrounded;
         
         public GroundedState(Controller controller, StateMachine stateMachine, MovementData movementData, string animBoolName = "") : base(controller, stateMachine, movementData, animBoolName)
         {
@@ -32,11 +34,18 @@ namespace Character.FSM.States.SuperStates
                 StateMachine.ChangeState(Controller.JumpState);
                 Controller.InputHandler.ResetJumpInput();
             }
+
+            if (!_isGrounded)
+            {
+                StateMachine.ChangeState(Controller.AirState);
+            }
         }
 
-        public override void PhysicsUpdate()
+        public override void DoChecks()
         {
-            base.PhysicsUpdate();
+            base.DoChecks();
+
+            _isGrounded = Controller.CheckIfTouchingGround();
         }
     }
 }

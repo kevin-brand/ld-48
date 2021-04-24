@@ -20,10 +20,7 @@ namespace Character.FSM.States.SubStates
             
             Controller.SetVelocityX(MovementData.movementSpeed * direction);
 
-            if (Math.Abs(Controller.FacingDirection - normalizedMoveInput) > Mathf.Epsilon)
-            {
-                Controller.Flip();
-            }
+            Controller.UpdateFacingDirection();
             
             // Check Exit Conditions
             if (Mathf.Abs(MoveInput) < Mathf.Epsilon)

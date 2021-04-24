@@ -12,6 +12,7 @@ namespace Character
         public StateMachine StateMachine { get; private set; }
         public Animator Anim { get; private set; }
         public Rigidbody2D Rigidbody2D { get; private set; }
+        public BoxCollider2D BoxCollider2D { get; private set; }
         public InputHandler InputHandler { get; private set; }
         public Vector2 CurrentVelocity { get; private set; }
         public int FacingDirection { get; private set; }
@@ -46,7 +47,7 @@ namespace Character
                 Anim = spriteChild.GetComponent<Animator>();
 
             Rigidbody2D = GetComponent<Rigidbody2D>();
-
+            BoxCollider2D = GetComponent<BoxCollider2D>();
             InputHandler = GetComponent<InputHandler>();
         }
 
@@ -67,6 +68,13 @@ namespace Character
             StateMachine.CurrentState.PhysicsUpdate();
         }
 
+        public bool CheckIfTouchingGround()
+        {
+            Vector2 groundCheckPosition = transform.position - new Vector3(0, BoxCollider2D.size.y / 2f);
+
+            return Physics2D.OverlapCircle(groundCheckPosition, movementData.groundCheckRadius, movementData.whatIsGround);
+        }
+
         public void SetVelocityX(float velocity)
         {
             _velocity.Set(velocity, CurrentVelocity.y);
@@ -81,7 +89,14 @@ namespace Character
             CurrentVelocity = _velocity;
         }
 
-        public void Flip()
+        public void UpdateFacingDirection()
+        {
+            int xInput = Mathf.RoundToInt(InputHandler.MovementInput);
+            if (xInput != 0 && xInput != FacingDirection)
+                Flip();
+        }
+        
+        private void Flip()
         {
             FacingDirection *= -1;
             spriteChild.transform.Rotate(0f, 180f, 0f);

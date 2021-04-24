@@ -12,6 +12,13 @@ namespace Character.FSM.States.SubStates
         {
             base.Enter();
             Controller.SetVelocityY(MovementData.jumpVelocity);
+            StateMachine.ChangeState(Controller.AirState);
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            IsAbilityDone = true;
         }
     }
 }
