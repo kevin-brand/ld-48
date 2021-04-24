@@ -25,6 +25,7 @@ namespace Bombs
 
         public void OnBombOneInput(InputAction.CallbackContext context)
         {
+            Debug.Log("Attempting to place Bomb 1");
             if (context.started)
                 AttemptToPlaceBomb(bombOne);
         }
