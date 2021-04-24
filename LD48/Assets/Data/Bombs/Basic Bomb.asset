@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Bomb
   m_EditorClassIdentifier: 
   fuseTime: 3
-  damage: 1
+  damage: 2
   pattern: {fileID: 11400000, guid: 6611611cbe5eb684983761fa4bee0e4b, type: 2}
   whatIsAffected:
     serializedVersion: 2
