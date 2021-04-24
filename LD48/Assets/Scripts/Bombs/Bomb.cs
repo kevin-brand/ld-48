@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Bombs
 {
-    public class Bomb : MonoBehaviour
+    public class Bomb : MonoBehaviour, IDamageable
     {
         [SerializeField] private BombData debugBombData;
         [SerializeField] private GameObject warningEffect;
@@ -16,6 +16,7 @@ namespace Bombs
         private bool _ticking = false;
 
         private bool _hasBeenInitialized = false;
+        private bool _exploding = false;
 
         private List<Vector2> _explosionPositions;
         private BombData _data;
@@ -79,6 +80,11 @@ namespace Bombs
 
         private void Detonate()
         {
+            if(_exploding)
+                return;
+
+            _exploding = true;
+            
             foreach (var detonationPosition in _explosionPositions)
             {
                 Debug.Log("Checking at: " + detonationPosition.ToString());
@@ -91,6 +97,11 @@ namespace Bombs
             }
             
             Destroy(this.gameObject);
+        }
+
+        public void ReceiveDamage(int damage)
+        {
+            Detonate();
         }
     }
 }

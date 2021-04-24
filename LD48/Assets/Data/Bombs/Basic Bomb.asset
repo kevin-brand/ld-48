@@ -17,7 +17,7 @@ MonoBehaviour:
   pattern: {fileID: 11400000, guid: 6611611cbe5eb684983761fa4bee0e4b, type: 2}
   whatIsAffected:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 448
   isLimited: 0
   numberOfBombs: 10
   sprite: {fileID: 21300000, guid: 1e0a241d0c694fe46a59cd92be652a8e, type: 3}
