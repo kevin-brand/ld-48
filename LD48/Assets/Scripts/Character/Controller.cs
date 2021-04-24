@@ -28,7 +28,6 @@ namespace Character
         public AirState AirState { get; private set; }
         
         // Serialized Fields
-        [SerializeField] private GameObject spriteChild;
         [SerializeField] private MovementData movementData;
 
         private Vector2 _velocity;
@@ -42,10 +41,8 @@ namespace Character
             LandState = new LandState(this, StateMachine, movementData, "land");
             JumpState = new JumpState(this, StateMachine, movementData, "jump");
             AirState = new AirState(this, StateMachine, movementData);
-
-            if (spriteChild != null)
-                Anim = spriteChild.GetComponent<Animator>();
-
+            
+            Anim = GetComponent<Animator>();
             Rigidbody2D = GetComponent<Rigidbody2D>();
             BoxCollider2D = GetComponent<BoxCollider2D>();
             InputHandler = GetComponent<InputHandler>();
@@ -99,7 +96,7 @@ namespace Character
         private void Flip()
         {
             FacingDirection *= -1;
-            spriteChild.transform.Rotate(0f, 180f, 0f);
+            transform.Rotate(0f, 180f, 0f);
         }
     }
 }
