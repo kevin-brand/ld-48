@@ -7,7 +7,9 @@ namespace Character
     {
         [Header("Move State")] 
         public float movementSpeed = 10;
-
         public bool allowAnalogMoveSpeed = false;
+
+        [Header("Jump State")] 
+        public float jumpVelocity = 15f;
     }
 }

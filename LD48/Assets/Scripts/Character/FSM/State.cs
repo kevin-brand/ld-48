@@ -23,7 +23,7 @@ namespace Character.FSM
         {
             DoChecks();
             
-            if (Controller.Anim != null)
+            if (Controller.Anim != null && _animBoolName != "")
                 Controller.Anim.SetBool(_animBoolName, true);
             
             StartTime = Time.time;

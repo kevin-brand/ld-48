@@ -17,9 +17,14 @@ namespace Character
         public int FacingDirection { get; private set; }
 
 
-        // States
+        // Ground States
         public IdleState IdleState { get; private set; }
         public MoveState MoveState { get; private set; }
+        public LandState LandState { get; private set; }
+        
+        // Ability States
+        public JumpState JumpState { get; private set; }
+        public AirState AirState { get; private set; }
         
         // Serialized Fields
         [SerializeField] private GameObject spriteChild;
@@ -33,6 +38,9 @@ namespace Character
 
             IdleState = new IdleState(this, StateMachine, movementData, "idle");
             MoveState = new MoveState(this, StateMachine, movementData, "move");
+            LandState = new LandState(this, StateMachine, movementData, "land");
+            JumpState = new JumpState(this, StateMachine, movementData, "jump");
+            AirState = new AirState(this, StateMachine, movementData);
 
             if (spriteChild != null)
                 Anim = spriteChild.GetComponent<Animator>();
@@ -62,6 +70,13 @@ namespace Character
         public void SetVelocityX(float velocity)
         {
             _velocity.Set(velocity, CurrentVelocity.y);
+            Rigidbody2D.velocity = _velocity;
+            CurrentVelocity = _velocity;
+        }
+
+        public void SetVelocityY(float velocity)
+        {
+            _velocity.Set(CurrentVelocity.x, velocity);
             Rigidbody2D.velocity = _velocity;
             CurrentVelocity = _velocity;
         }
