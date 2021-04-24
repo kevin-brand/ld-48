@@ -8,16 +8,20 @@ namespace Character
     [RequireComponent(typeof(InputHandler), typeof(Rigidbody2D))]
     public class Controller : MonoBehaviour
     {
+        // Properties
         public StateMachine StateMachine { get; private set; }
         public Animator Anim { get; private set; }
         public Rigidbody2D Rigidbody2D { get; private set; }
         public InputHandler InputHandler { get; private set; }
         public Vector2 CurrentVelocity { get; private set; }
+        public int FacingDirection { get; private set; }
 
+
+        // States
         public IdleState IdleState { get; private set; }
         public MoveState MoveState { get; private set; }
         
-
+        // Serialized Fields
         [SerializeField] private GameObject spriteChild;
         [SerializeField] private MovementData movementData;
 
@@ -41,6 +45,7 @@ namespace Character
         private void Start()
         {
             StateMachine.Initialize(IdleState);
+            FacingDirection = 1;
         }
 
         private void Update()
@@ -59,6 +64,12 @@ namespace Character
             _velocity.Set(velocity, CurrentVelocity.y);
             Rigidbody2D.velocity = _velocity;
             CurrentVelocity = _velocity;
+        }
+
+        public void Flip()
+        {
+            FacingDirection *= -1;
+            spriteChild.transform.Rotate(0f, 180f, 0f);
         }
     }
 }

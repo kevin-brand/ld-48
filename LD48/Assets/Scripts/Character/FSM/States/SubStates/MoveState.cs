@@ -1,3 +1,4 @@
+using System;
 using Character.FSM.States.SuperStates;
 using UnityEngine;
 
@@ -14,8 +15,15 @@ namespace Character.FSM.States.SubStates
             base.LogicUpdate();
 
             float rawMoveInput = MoveInput;
-            float direction = (MovementData.allowAnalogMoveSpeed) ? rawMoveInput : Mathf.RoundToInt(rawMoveInput);
+            float normalizedMoveInput = Mathf.RoundToInt(rawMoveInput);
+            float direction = (MovementData.allowAnalogMoveSpeed) ? rawMoveInput : normalizedMoveInput;
+            
             Controller.SetVelocityX(MovementData.movementSpeed * direction);
+
+            if (Math.Abs(Controller.FacingDirection - normalizedMoveInput) > Mathf.Epsilon)
+            {
+                Controller.Flip();
+            }
             
             // Check Exit Conditions
             if (Mathf.Abs(MoveInput) < Mathf.Epsilon)
