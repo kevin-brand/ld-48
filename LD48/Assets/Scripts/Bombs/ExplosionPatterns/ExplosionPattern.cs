@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Bombs
+namespace Bombs.ExplosionPatterns
 {
     public abstract class ExplosionPattern : ScriptableObject
     {

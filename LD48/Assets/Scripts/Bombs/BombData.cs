@@ -1,3 +1,4 @@
+using Bombs.ExplosionPatterns;
 using UnityEngine;
 
 namespace Bombs
