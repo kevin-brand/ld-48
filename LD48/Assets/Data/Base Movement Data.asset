@@ -10,5 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 747eb370391be494a8e8a32fa56d34a9, type: 3}
-  m_Name: Base Data
+  m_Name: Base Movement Data
   m_EditorClassIdentifier: 
+  movementSpeed: 10
+  allowAnalogMoveSpeed: 0

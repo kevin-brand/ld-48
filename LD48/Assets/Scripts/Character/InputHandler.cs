@@ -5,12 +5,11 @@ namespace Character
 {
     public class InputHandler : MonoBehaviour
     {
-        private float _movementInput;
+        public float MovementInput { get; private set; }
         
         public void OnMoveInput(InputAction.CallbackContext context)
         {
-            _movementInput = context.ReadValue<float>();
-            Debug.Log(_movementInput);
+            MovementInput = context.ReadValue<float>();
         }
 
         public void OnJumpInput(InputAction.CallbackContext context)

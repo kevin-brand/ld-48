@@ -5,17 +5,23 @@ using UnityEngine;
 
 namespace Character
 {
+    [RequireComponent(typeof(InputHandler), typeof(Rigidbody2D))]
     public class Controller : MonoBehaviour
     {
         public StateMachine StateMachine { get; private set; }
         public Animator Anim { get; private set; }
-        
+        public Rigidbody2D Rigidbody2D { get; private set; }
+        public InputHandler InputHandler { get; private set; }
+        public Vector2 CurrentVelocity { get; private set; }
+
         public IdleState IdleState { get; private set; }
         public MoveState MoveState { get; private set; }
         
 
-        [SerializeField] private Animator spriteChild;
+        [SerializeField] private GameObject spriteChild;
         [SerializeField] private MovementData movementData;
+
+        private Vector2 _velocity;
         
         private void Awake()
         {
@@ -26,6 +32,10 @@ namespace Character
 
             if (spriteChild != null)
                 Anim = spriteChild.GetComponent<Animator>();
+
+            Rigidbody2D = GetComponent<Rigidbody2D>();
+
+            InputHandler = GetComponent<InputHandler>();
         }
 
         private void Start()
@@ -35,12 +45,20 @@ namespace Character
 
         private void Update()
         {
+            CurrentVelocity = Rigidbody2D.velocity;
             StateMachine.CurrentState.LogicUpdate();
         }
 
         private void FixedUpdate()
         {
             StateMachine.CurrentState.PhysicsUpdate();
+        }
+
+        public void SetVelocityX(float velocity)
+        {
+            _velocity.Set(velocity, CurrentVelocity.y);
+            Rigidbody2D.velocity = _velocity;
+            CurrentVelocity = _velocity;
         }
     }
 }

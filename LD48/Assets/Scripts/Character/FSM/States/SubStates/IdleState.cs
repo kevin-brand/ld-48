@@ -12,7 +12,17 @@ namespace Character.FSM.States.SubStates
         public override void Enter()
         {
             base.Enter();
-            Debug.Log("Entered Idle State");
+            Controller.SetVelocityX(0f);
+        }
+
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+
+            if (Mathf.Abs(MoveInput) > Mathf.Epsilon)
+            {
+                StateMachine.ChangeState(Controller.MoveState);
+            }
         }
     }
 }
