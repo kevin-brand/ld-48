@@ -25,7 +25,6 @@ namespace Bombs
 
         public void OnBombOneInput(InputAction.CallbackContext context)
         {
-            Debug.Log("Attempting to place Bomb 1");
             if (context.started)
                 AttemptToPlaceBomb(bombOne);
         }
@@ -44,10 +43,7 @@ namespace Bombs
             {
                 Bomb bomb = Instantiate(bombPrefab);
                 bomb.Place(targetLocation, bombData);
-                return;
             }
-            
-            Debug.Log("CAN'T PLACE A BOMB HERE");
         }
 
         private bool AttemptToGetAndSetNearestValidPlacingPosition(ref Vector2 v)

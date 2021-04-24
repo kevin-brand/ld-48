@@ -27,7 +27,6 @@ namespace Character.FSM
                 Controller.Anim.SetBool(_animBoolName, true);
             
             StartTime = Time.time;
-            Debug.Log("Entered: " + _animBoolName);
         }
 
         public virtual void Exit()
