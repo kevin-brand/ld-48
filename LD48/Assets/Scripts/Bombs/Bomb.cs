@@ -10,6 +10,7 @@ namespace Bombs
     {
         [SerializeField] private BombData debugBombData;
         [SerializeField] private GameObject warningEffect;
+        [SerializeField] private bool displayWarningEffect;
         
         private SpriteRenderer _renderer;
         private int _fuseTime;
@@ -71,6 +72,9 @@ namespace Bombs
 
         private void DisplayWarningEffect()
         {
+            if (!displayWarningEffect)
+                return;
+            
             foreach (var detonationPosition in _explosionPositions)
             {
                 Vector3 detonationWorldPosition = new Vector3(detonationPosition.x, detonationPosition.y, 0);
