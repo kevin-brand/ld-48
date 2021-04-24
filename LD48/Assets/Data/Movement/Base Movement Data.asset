@@ -18,5 +18,5 @@ MonoBehaviour:
     m_Bits: 192
   movementSpeed: 5
   allowAnalogMoveSpeed: 0
-  jumpVelocity: 12
+  jumpVelocity: 15
   airControlFactor: 1
