@@ -417,13 +417,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLevel: {fileID: 2800000, guid: 4ae48b879a6cabf4e91f909e363c29f8, type: 3}
   cam: {fileID: 1158489228}
+  Level: {fileID: 6962220612815461007, guid: 3b78219e9f036c54dbc2cd37f874176a, type: 3}
   Levels:
   - {fileID: 2800000, guid: e16105ec07eff1d408c8220593d1f228, type: 3}
   - {fileID: 2800000, guid: 7090a597a50868f4aa33c3ea6e49a623, type: 3}
+  - {fileID: 2800000, guid: 96eab106e1a1403438d703121d5b12ee, type: 3}
+  - {fileID: 2800000, guid: 05ed6bc5d5088d74192e034c480108ac, type: 3}
+  - {fileID: 2800000, guid: 7ece0b19ff3e2364d97a505c8cfd4efa, type: 3}
+  - {fileID: 2800000, guid: a2ddc43a78973d143be3fd133edd3c5e, type: 3}
   difficultyIncreaseAt: 0
   colorDictionary:
   - color: {r: 0, g: 0, b: 0, a: 1}
-    prefab: {fileID: 8222089917763972239, guid: b43dcb4b7c5ad16488937252f6e0f1aa, type: 3}
+    possiblePrefabs:
+    - {fileID: 8222089917763972239, guid: b43dcb4b7c5ad16488937252f6e0f1aa, type: 3}
   - color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
-    prefab: {fileID: 8222089917763972239, guid: a906e9124b9f8c74cb4efaeceec5a61c, type: 3}
+    possiblePrefabs:
+    - {fileID: 8222089917763972239, guid: a906e9124b9f8c74cb4efaeceec5a61c, type: 3}
+  - color: {r: 1, g: 1, b: 0, a: 1}
+    possiblePrefabs:
+    - {fileID: 8222089917763972239, guid: a906e9124b9f8c74cb4efaeceec5a61c, type: 3}
+    - {fileID: 8222089917763972239, guid: a906e9124b9f8c74cb4efaeceec5a61c, type: 3}
+    - {fileID: 8222089917763972239, guid: 3ea56f9561b984b4f8ef54f13a901fa7, type: 3}
   Grid: {fileID: 601681716}
