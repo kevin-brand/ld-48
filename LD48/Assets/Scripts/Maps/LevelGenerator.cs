@@ -5,11 +5,27 @@ using UnityEngine;
 public class LevelGenerator
 {
     public ColorDictionary[] colorDictionary;
+    public Transform parentGrid;
+
+    private GameObject currentLevel;
+    private GameObject level;
+
+
+    public LevelGenerator (ColorDictionary[] colorDictionary, Transform grid, GameObject Level)
+    {
+        this.colorDictionary = colorDictionary;
+        this.parentGrid = grid;
+        this.level = Level;
+    }
+
     public int generate(int origin, Texture2D sourceTex)
     {
         try
         {
             int negativeOffset = (origin - sourceTex.height);
+
+            currentLevel = GameObject.Instantiate((level), new Vector2(0, negativeOffset), Quaternion.identity, parentGrid);
+
 
             for (int x = 0; x < sourceTex.width; x++)
             {
@@ -40,7 +56,7 @@ public class LevelGenerator
             if (entry.color.Equals(color))
             {
                 Vector2 vector2 = new Vector2(x, y + offset);
-                GameObject.Instantiate(entry.prefab, vector2, Quaternion.identity);
+                GameObject.Instantiate(entry.prefab(), vector2, Quaternion.identity, currentLevel.transform);
             }
         }
     }

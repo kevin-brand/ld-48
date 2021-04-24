@@ -416,9 +416,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartLevel: {fileID: 2800000, guid: 4ae48b879a6cabf4e91f909e363c29f8, type: 3}
+  cam: {fileID: 1158489228}
+  Levels:
+  - {fileID: 2800000, guid: e16105ec07eff1d408c8220593d1f228, type: 3}
+  - {fileID: 2800000, guid: 7090a597a50868f4aa33c3ea6e49a623, type: 3}
   difficultyIncreaseAt: 0
   colorDictionary:
   - color: {r: 0, g: 0, b: 0, a: 1}
     prefab: {fileID: 8222089917763972239, guid: b43dcb4b7c5ad16488937252f6e0f1aa, type: 3}
   - color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
     prefab: {fileID: 8222089917763972239, guid: a906e9124b9f8c74cb4efaeceec5a61c, type: 3}
+  Grid: {fileID: 601681716}
