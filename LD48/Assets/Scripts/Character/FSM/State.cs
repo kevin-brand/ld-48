@@ -6,16 +6,16 @@ namespace Character.FSM
     {
         protected Controller Controller;
         protected StateMachine StateMachine;
-        protected Stats Stats;
+        protected MovementData MovementData;
 
         protected float StartTime;
         private string _animBoolName;
 
-        public State(Controller controller, StateMachine stateMachine, Stats stats, string animBoolName = "")
+        public State(Controller controller, StateMachine stateMachine, MovementData movementData, string animBoolName = "")
         {
             Controller = controller;
             StateMachine = stateMachine;
-            Stats = stats;
+            MovementData = movementData;
             _animBoolName = animBoolName;
         }
 
