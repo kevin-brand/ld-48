@@ -8,6 +8,9 @@ namespace Bombs
 {
     public class Bomb : MonoBehaviour
     {
+        [SerializeField] private BombData debugBombData;
+        [SerializeField] private GameObject warningEffect;
+        
         private SpriteRenderer _renderer;
         private int _fuseTime;
         private bool _ticking = false;
@@ -19,6 +22,12 @@ namespace Bombs
         private void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
+        }
+
+        private void Start()
+        {
+            if (debugBombData)
+                Place(this.transform.position, debugBombData);
         }
 
         private void Update()
@@ -54,8 +63,18 @@ namespace Bombs
             
             transform.position = position;
             _explosionPositions = _data.pattern.GetExplosionPositions(position);
-
+            DisplayWarningEffect();
+            
             _hasBeenInitialized = true;
+        }
+
+        private void DisplayWarningEffect()
+        {
+            foreach (var detonationPosition in _explosionPositions)
+            {
+                Vector3 detonationWorldPosition = new Vector3(detonationPosition.x, detonationPosition.y, 0);
+                Instantiate(warningEffect, detonationWorldPosition, Quaternion.identity, this.transform);
+            }
         }
 
         private void Detonate()
@@ -68,6 +87,8 @@ namespace Bombs
                     hit.GetComponent<IDamageable>().ReceiveDamage(_data.damage);
                 }
             }
+            
+            Destroy(this.gameObject);
         }
     }
 }
