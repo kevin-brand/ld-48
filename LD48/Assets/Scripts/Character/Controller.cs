@@ -1,18 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Character.FSM;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+namespace Character
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Controller : MonoBehaviour
     {
-        
-    }
+        public StateMachine StateMachine { get; private set; }
+        public Animator Anim { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
+        [SerializeField] private Animator spriteChild;
         
+        private void Awake()
+        {
+            StateMachine = new StateMachine();
+
+            if (spriteChild != null)
+                Anim = spriteChild.GetComponent<Animator>();
+        }
+
+        private void Update()
+        {
+            StateMachine.CurrentState.LogicUpdate();
+        }
+
+        private void FixedUpdate()
+        {
+            StateMachine.CurrentState.PhysicsUpdate();
+        }
     }
 }
