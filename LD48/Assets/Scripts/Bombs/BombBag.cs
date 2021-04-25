@@ -8,41 +8,43 @@ namespace Bombs
     {
         [SerializeField] private Bomb bombPrefab;
         [SerializeField] private BombData defaultBomb;
-        [SerializeField] private BombData bombOne;
-        [SerializeField] private BombData bombTwo;
+        [SerializeField] private BombSlot slotOne;
+        [SerializeField] private BombSlot slotTwo;
         [SerializeField] private LayerMask cantPlaceOn;
-        private int _bombOneHeld;
-        private int _bombTwoHeld;
-        
+        [SerializeField] private float bombCooldown;
+
         private void Awake()
         {
-            if (bombOne == null)
-                bombOne = defaultBomb;
-
-            if (bombTwo == null)
-                bombTwo = defaultBomb;
+            slotOne.SetBomb(defaultBomb);
+            slotTwo.SetBomb(defaultBomb);
         }
 
         public void OnBombOneInput(InputAction.CallbackContext context)
         {
             if (context.started)
-                AttemptToPlaceBomb(bombOne);
+                AttemptToPlaceBomb(slotOne);
         }
         
         public void OnBombTwoInput(InputAction.CallbackContext context)
         {
             if (context.started)
-                AttemptToPlaceBomb(bombTwo);
+                AttemptToPlaceBomb(slotTwo);
         }
 
-        private void AttemptToPlaceBomb(BombData bombData)
+        private void AttemptToPlaceBomb(BombSlot slot)
         {
+            if (slot.held <= 0)
+                slot.SetBomb(defaultBomb);
+            
             Vector2 targetLocation = new Vector2();
 
             if (AttemptToGetAndSetNearestValidPlacingPosition(ref targetLocation))
             {
                 Bomb bomb = Instantiate(bombPrefab);
-                bomb.Place(targetLocation, bombData);
+                bomb.Place(targetLocation, slot.Bomb);
+                
+                if (slot.Bomb.isLimited)
+                    slot.held--;
             }
         }
 

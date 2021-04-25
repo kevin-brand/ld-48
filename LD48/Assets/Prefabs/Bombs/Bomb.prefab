@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugBombData: {fileID: 0}
   warningEffect: {fileID: 6520065896638507188, guid: 6b9db1b5143142144ba96270bf56b456, type: 3}
+  displayWarningEffect: 1
 --- !u!212 &9204986911424394352
 SpriteRenderer:
   m_ObjectHideFlags: 0

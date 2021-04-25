@@ -13,7 +13,8 @@ namespace Bombs
 
         public bool isLimited;
         public int numberOfBombs;
-        
+
+        public int timeToDisplayWarningEffectAt = 1;
         public Sprite sprite;
     }
 }

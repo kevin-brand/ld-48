@@ -10,8 +10,7 @@ namespace Bombs
     {
         [SerializeField] private BombData debugBombData;
         [SerializeField] private GameObject warningEffect;
-        [SerializeField] private bool displayWarningEffect;
-        
+
         private SpriteRenderer _renderer;
         private int _fuseTime;
         private bool _ticking = false;
@@ -54,6 +53,9 @@ namespace Bombs
             if (_fuseTime == 0)
                 Detonate();
             
+            if (_fuseTime == _data.timeToDisplayWarningEffectAt)
+                DisplayWarningEffect();
+            
             _ticking = false;
         }
 
@@ -65,16 +67,12 @@ namespace Bombs
             
             transform.position = position;
             _explosionPositions = _data.pattern.GetExplosionPositions(position);
-            DisplayWarningEffect();
-            
+
             _hasBeenInitialized = true;
         }
 
         private void DisplayWarningEffect()
         {
-            if (!displayWarningEffect)
-                return;
-            
             foreach (var detonationPosition in _explosionPositions)
             {
                 Vector3 detonationWorldPosition = new Vector3(detonationPosition.x, detonationPosition.y, 0);
