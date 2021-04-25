@@ -10,7 +10,9 @@ namespace Bombs
         [SerializeField] private BombData defaultBomb;
         [SerializeField] private BombSlot[] slots = new BombSlot[2];
         [SerializeField] private LayerMask cantPlaceOn;
-        [SerializeField] private float bombCooldown;
+        [SerializeField] private float bombCooldown = 0.5f;
+
+        private float _bombCooldownRemaining = 0f;
 
         private void Awake()
         {
@@ -30,8 +32,19 @@ namespace Bombs
                 AttemptToPlaceBomb(slots[1]);
         }
 
+        private void Update()
+        {
+            if (_bombCooldownRemaining > -1f)
+            {
+                _bombCooldownRemaining -= Time.deltaTime;
+            }
+        }
+
         private void AttemptToPlaceBomb(BombSlot slot)
         {
+            if (_bombCooldownRemaining > 0) 
+                return;
+            
             if (slot.held <= 0)
                 slot.SetBomb(defaultBomb);
             
@@ -44,6 +57,8 @@ namespace Bombs
                 
                 if (slot.Bomb.isLimited)
                     slot.held--;
+
+                _bombCooldownRemaining = bombCooldown;
             }
         }
 

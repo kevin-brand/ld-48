@@ -175,8 +175,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 9204986911424394367, guid: de4871614d74b074fa86965407594e0e, type: 3}
   defaultBomb: {fileID: 11400000, guid: da71c5854e6345f489e228f04ebd7dc1, type: 2}
-  bombOne: {fileID: 11400000, guid: da71c5854e6345f489e228f04ebd7dc1, type: 2}
-  bombTwo: {fileID: 11400000, guid: da71c5854e6345f489e228f04ebd7dc1, type: 2}
+  slots:
+  - held: 0
+  - held: 0
+  cantPlaceOn:
+    serializedVersion: 2
+    m_Bits: 192
+  bombCooldown: 0.25
 --- !u!50 &910791441869270670
 Rigidbody2D:
   serializedVersion: 4
