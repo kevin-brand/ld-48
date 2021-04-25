@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Maps;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 public class LevelGenerator
 {
@@ -54,14 +55,32 @@ public class LevelGenerator
 
         foreach (ColorMapping entry in colorDictionary)
         {
-            if (entry.color.Equals(color))
+            if (CompareColors(entry.color, color))
             {
+                Debug.Log(entry.color);
                 Vector2 vector2 = new Vector2(x, y + offset);
-                try
-                {
+                try {
                     GameObject.Instantiate(entry.GetRandomPrefab(), vector2, Quaternion.identity, currentLevel.transform);
                 } catch (System.Exception) { }
+
+                return;
             }
         }
+    }
+
+    private bool CompareColors (Color a, Color b)
+    {
+        if (a.r - .01f < b.r && b.r < a.r + .01f)
+        {
+            if (a.g - .01f < b.g && b.g < a.g + .01f)
+            {
+                if (a.b - .01f < b.b && b.b < a.b + .01f)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }
