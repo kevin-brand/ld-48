@@ -618,5 +618,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757b335303ccf6944bc304a4d39e871c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugBombData: {fileID: 11400000, guid: da71c5854e6345f489e228f04ebd7dc1, type: 2}
+  staticBomb: {fileID: 11400000, guid: 8619cadff6313e84fb1e012a738959f8, type: 2}
   warningEffect: {fileID: 6520065896638507188, guid: 6b9db1b5143142144ba96270bf56b456, type: 3}
