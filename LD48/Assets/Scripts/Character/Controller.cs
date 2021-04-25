@@ -12,7 +12,7 @@ namespace Character
         public StateMachine StateMachine { get; private set; }
         public Animator Anim { get; private set; }
         public Rigidbody2D Rigidbody2D { get; private set; }
-        public BoxCollider2D BoxCollider2D { get; private set; }
+        public CapsuleCollider2D Collider2D { get; private set; }
         public InputHandler InputHandler { get; private set; }
         public Vector2 CurrentVelocity { get; private set; }
         public int FacingDirection { get; private set; }
@@ -44,7 +44,7 @@ namespace Character
             
             Anim = GetComponent<Animator>();
             Rigidbody2D = GetComponent<Rigidbody2D>();
-            BoxCollider2D = GetComponent<BoxCollider2D>();
+            Collider2D = GetComponent<CapsuleCollider2D>();
             InputHandler = GetComponent<InputHandler>();
         }
 
@@ -67,7 +67,7 @@ namespace Character
 
         public bool CheckIfTouchingGround()
         {
-            Vector2 groundCheckPosition = transform.position - new Vector3(0, BoxCollider2D.size.y / 2f);
+            Vector2 groundCheckPosition = transform.position - new Vector3(0, Collider2D.size.y / 2f);
 
             return Physics2D.OverlapCircle(groundCheckPosition, movementData.groundCheckRadius, movementData.whatIsGround);
         }

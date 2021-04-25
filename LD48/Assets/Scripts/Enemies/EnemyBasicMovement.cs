@@ -1,43 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBasicMovement : MonoBehaviour
+namespace Enemies
 {
-
-    public float Speed;
-    public int Dir;
-    public LayerMask BounceOff;
-
-    private Rigidbody2D rb;
-    private RaycastHit2D _hit;
-
-    private void Awake()
+    public class EnemyBasicMovement : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Physics2D.IgnoreLayerCollision(9, 9, true);
-    }
+        public float speed;
+        public LayerMask bounceOff;
 
-    private void Update()
-    {
-        
-    }
+        protected int Dir = 1;
+        protected Rigidbody2D Rigidbody2D;
+        protected RaycastHit2D Hit;
+        protected Transform Transform;
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        _hit = Physics2D.Linecast(gameObject.transform.position + new Vector3(Dir * 0.37f, 0, 0), gameObject.transform.position + new Vector3(Dir * .5f, 0, 0), BounceOff);
-        Debug.DrawLine(gameObject.transform.position + new Vector3(Dir * 0.37f, 0, 0), gameObject.transform.position + new Vector3(Dir * .5f, 0, 0), Color.red, 1);
-        if (_hit.collider != null)
-        {            
-            Dir *= -1;
+        protected virtual void Awake()
+        {
+            Rigidbody2D = GetComponent<Rigidbody2D>();
+            Transform = GetComponent<Transform>();
         }
-        rb.velocity = new Vector2(Dir * Speed, rb.velocity.y);
-        transform.localScale = new Vector2(Dir * .7f, .7f);
+
+        protected virtual void Start()
+        {
+            Physics2D.IgnoreLayerCollision(9, 9, true);
+            Physics2D.IgnoreLayerCollision(9, 8, true);
+        }
+    
+        protected virtual void FixedUpdate()
+        {
+            var position = Transform.position;
+            Move(position);
+        }
+
+        protected virtual void Move(Vector3 position)
+        {
+            Hit = Physics2D.Linecast(position + new Vector3(Dir * 0.37f, 0, 0), position + new Vector3(Dir * .5f, 0, 0), bounceOff);
+            if (Hit.collider != null)
+            {            
+                Dir *= -1;
+            }
+            Rigidbody2D.velocity = new Vector2(Dir * speed, Rigidbody2D.velocity.y);
+            transform.localScale = new Vector2(Dir * .7f, .7f);
+        }
     }
 }

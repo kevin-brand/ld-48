@@ -16,7 +16,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 192
-  movementSpeed: 5
+  movementSpeed: 4
   allowAnalogMoveSpeed: 0
-  jumpVelocity: 15
+  jumpVelocity: 11
   airControlFactor: 1
