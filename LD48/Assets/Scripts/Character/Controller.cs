@@ -26,6 +26,7 @@ namespace Character
         // Ability States
         public JumpState JumpState { get; private set; }
         public AirState AirState { get; private set; }
+        public DeathState DeathState { get; private set; }
         
         // Serialized Fields
         [SerializeField] private MovementData movementData;
@@ -41,6 +42,7 @@ namespace Character
             LandState = new LandState(this, StateMachine, movementData, "land");
             JumpState = new JumpState(this, StateMachine, movementData, "jump");
             AirState = new AirState(this, StateMachine, movementData);
+            DeathState = new DeathState(this, StateMachine, movementData);
             
             Anim = GetComponent<Animator>();
             Rigidbody2D = GetComponent<Rigidbody2D>();
