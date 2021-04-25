@@ -13,6 +13,7 @@ namespace Bombs
 
         [SerializeField] private SpriteRenderer typeOverlay;
         [SerializeField] private GameObject warningEffect;
+        [SerializeField] private GameObject explosionEffect;
 
         private SpriteRenderer _renderer;
         private int _fuseTime;
@@ -103,6 +104,9 @@ namespace Bombs
             
             foreach (var detonationPosition in _explosionPositions)
             {
+                if (explosionEffect)
+                    Instantiate(explosionEffect, detonationPosition, Quaternion.identity);
+                
                 Collider2D hit = Physics2D.OverlapCircle(detonationPosition, 0.4f, _data.whatIsAffected);
                 if (hit != null && hit.GetComponent<IDamageable>() != null)
                 {
