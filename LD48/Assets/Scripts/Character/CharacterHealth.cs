@@ -8,7 +8,9 @@ namespace Character
     {
         [SerializeField] private int health = 6;
         [SerializeField] private float invulnerableTime = 0.5f;
-        
+
+        public int Health => health;
+
         private float _invulnerableTimeRemaining = 0f;
         private Controller _controller;
         private bool _dead;
