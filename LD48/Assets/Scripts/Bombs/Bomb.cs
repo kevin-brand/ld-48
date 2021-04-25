@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Bombs
 {
@@ -14,6 +15,7 @@ namespace Bombs
         [SerializeField] private SpriteRenderer typeOverlay;
         [SerializeField] private GameObject warningEffect;
         [SerializeField] private GameObject explosionEffect;
+        public UnityEvent screenShakeEvent;
 
         private SpriteRenderer _renderer;
         private int _fuseTime;
@@ -101,6 +103,7 @@ namespace Bombs
                 return;
 
             _exploding = true;
+            screenShakeEvent.Invoke();
             
             foreach (var detonationPosition in _explosionPositions)
             {
