@@ -42,7 +42,7 @@ public class ScoreManager : MonoBehaviour
         _lootMulti = 10;
     }
 
-    public int getHighscore()
+    public int GetHighscore()
     {
         return (_enemyMulti * _killedEnemies) + (_depthMulti * _maxDepth) + (_lootMulti * _lootCollected);
     }

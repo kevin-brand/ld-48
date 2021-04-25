@@ -8,7 +8,6 @@ namespace Enemies
         [SerializeField] private int health = 2;
         public void ReceiveDamage(int damage)
         {
-            Debug.Log("I recieved damage!");
             health -= damage;
             
             if (health <= 0)
@@ -17,6 +16,10 @@ namespace Enemies
 
         private void Die()
         {
+            if (ScoreManager.Instance != null)
+            {
+                ScoreManager.Instance.AddEnemyScore(1);
+            }
             Destroy(this.gameObject);
         }
     }

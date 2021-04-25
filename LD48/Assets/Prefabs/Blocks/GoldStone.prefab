@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 5505822634804985506}
   - component: {fileID: -1687413036562610611}
   m_Layer: 6
-  m_Name: Valuble
+  m_Name: GoldStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -618,5 +618,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe18970b19af15140bd212194a88d8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drop: {fileID: 0}
-  dropAmount: 1
+  drop: {fileID: 8007218865042062331, guid: 3e54b39c17e3cfb45a7ff044c64a5e51, type: 3}
+  dropAmount: 6
