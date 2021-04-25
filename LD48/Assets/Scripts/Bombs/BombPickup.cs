@@ -14,10 +14,8 @@ public class BombPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger Enter");
         if (other.GetComponent<BombBag>())
         {
-            Debug.Log("Found Player");
             _playerIsInTriggerRange = true;
             _bag = other.GetComponent<BombBag>();
         }

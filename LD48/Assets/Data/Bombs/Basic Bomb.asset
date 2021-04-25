@@ -17,7 +17,7 @@ MonoBehaviour:
   pattern: {fileID: 11400000, guid: 6611611cbe5eb684983761fa4bee0e4b, type: 2}
   whatIsAffected:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 960
   isLimited: 0
   numberOfBombs: 1
   timeToDisplayWarningEffectAt: 1
