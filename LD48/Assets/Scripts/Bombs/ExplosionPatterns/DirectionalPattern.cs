@@ -11,6 +11,7 @@ namespace Bombs.ExplosionPatterns
         public override List<Vector2> GetExplosionPositions(Vector2 point)
         {
             List<Vector2> explosionPositions = new List<Vector2>();
+            explosionPositions.Add(point);
             foreach (var direction in directions)
             {
                 for (int i = 1; i <= range; i++)

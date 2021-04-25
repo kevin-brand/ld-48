@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 747eb370391be494a8e8a32fa56d34a9, type: 3}
-  m_Name: Base Movement Data
+  m_Script: {fileID: 11500000, guid: 5fb1a986fa5b7b44abbf28e5d011b9a7, type: 3}
+  m_Name: Cross 2
   m_EditorClassIdentifier: 
-  groundCheckRadius: 0.3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 192
-  movementSpeed: 5
-  allowAnalogMoveSpeed: 0
-  jumpVelocity: 12
-  airControlFactor: 1
+  directions:
+  - {x: 1, y: 0}
+  - {x: -1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  range: 2
