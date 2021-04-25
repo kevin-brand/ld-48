@@ -81,6 +81,7 @@ MonoBehaviour:
   staticBomb: {fileID: 0}
   typeOverlay: {fileID: 0}
   warningEffect: {fileID: 6520065896638507188, guid: 6b9db1b5143142144ba96270bf56b456, type: 3}
+  explosionEffect: {fileID: 6065797155282367760, guid: 36721eaed438f054899cc79f2d4ccc4f, type: 3}
 --- !u!212 &9204986911424394352
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,7 +150,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.25}
     oldSize: {x: 1, y: 1.6666666}
     newSize: {x: 1, y: 1.6666666}
     adaptiveTilingThreshold: 0.5
