@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 910791441869270706}
   - component: {fileID: 910791441869270669}
   - component: {fileID: 910791441869270668}
+  - component: {fileID: 2415132633575616390}
   - component: {fileID: 7874163735377753122}
   - component: {fileID: 910791441869270670}
   - component: {fileID: 910791441869270671}
@@ -161,6 +162,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementData: {fileID: 11400000, guid: d1deefb7b54a4c8409a6fb5ddecb844f, type: 2}
+--- !u!114 &2415132633575616390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910791441869270704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ba053e2b244e48afa7fefd5c0c5ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
+  invulnerableTime: 0.5
 --- !u!114 &7874163735377753122
 MonoBehaviour:
   m_ObjectHideFlags: 0
