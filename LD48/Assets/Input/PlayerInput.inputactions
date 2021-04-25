@@ -181,6 +181,17 @@
                 },
                 {
                     "name": "",
+                    "id": "17b772e4-0f8e-43b6-b422-5f7b70de52ba",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "27184a7f-d177-4bd9-bd12-28a1297ecc71",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -205,6 +216,17 @@
                     "name": "",
                     "id": "80641ea4-d340-4adf-8785-943be68a1103",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4a90855-82be-450b-9b36-985c279a38ee",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
