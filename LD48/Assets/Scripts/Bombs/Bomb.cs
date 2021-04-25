@@ -10,6 +10,8 @@ namespace Bombs
     {
 
         [SerializeField] private BombData staticBomb;
+
+        [SerializeField] private SpriteRenderer typeOverlay;
         [SerializeField] private GameObject warningEffect;
 
         private SpriteRenderer _renderer;
@@ -28,6 +30,9 @@ namespace Bombs
 
         private void Start()
         {
+            if (typeOverlay)
+                _renderer = typeOverlay;
+            
             if (staticBomb)
             {
                 _data = staticBomb;
@@ -66,7 +71,9 @@ namespace Bombs
         public void Place(Vector2 position, BombData data)
         {
             _data = data;
-            _renderer.sprite = _data.sprite;
+            
+            if (_renderer)
+                _renderer.sprite = _data.sprite;
             _fuseTime = _data.fuseTime;
             
             transform.position = position;
