@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8641782035712264868}
   - component: {fileID: 1666222525400963831}
-  - component: {fileID: 3756961290234540218}
   - component: {fileID: 2351014377124282358}
   m_Layer: 6
   m_Name: Bedrock
@@ -85,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3756961290234540218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8222089917763972239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39e3d6e804c16f4bb895c319d8ee0e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2351014377124282358
 BoxCollider2D:
   m_ObjectHideFlags: 0
