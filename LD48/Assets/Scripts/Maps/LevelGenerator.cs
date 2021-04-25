@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Maps;
 using UnityEngine;
 
 public class LevelGenerator
 {
-    public ColorDictionary[] colorDictionary;
+    public ColorMapping[] colorDictionary;
     public Transform parentGrid;
 
     private GameObject currentLevel;
     private GameObject level;
 
 
-    public LevelGenerator (ColorDictionary[] colorDictionary, Transform grid, GameObject Level)
+    public LevelGenerator (ColorMapping[] colorDictionary, Transform grid, GameObject Level)
     {
         this.colorDictionary = colorDictionary;
         this.parentGrid = grid;
@@ -51,12 +52,12 @@ public class LevelGenerator
             return;
         }
 
-        foreach (ColorDictionary entry in colorDictionary)
+        foreach (ColorMapping entry in colorDictionary)
         {
             if (entry.color.Equals(color))
             {
                 Vector2 vector2 = new Vector2(x, y + offset);
-                GameObject.Instantiate(entry.prefab(), vector2, Quaternion.identity, currentLevel.transform);
+                GameObject.Instantiate(entry.GetRandomPrefab(), vector2, Quaternion.identity, currentLevel.transform);
             }
         }
     }

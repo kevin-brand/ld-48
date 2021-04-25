@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Maps;
 using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
@@ -11,7 +12,7 @@ public class MapGenerator : MonoBehaviour
     // or more Arrays, one per difficulty
     public Texture2D[] Levels;
     public int difficultyIncreaseAt;
-    public ColorDictionary[] colorDictionary;
+    public ColorDictionaryData colorDictionary;
     public Transform Grid;
 
     private int lastDepth = 0;
@@ -19,7 +20,7 @@ public class MapGenerator : MonoBehaviour
 
     private void Awake()
     {
-        levelGenerator = new LevelGenerator(colorDictionary, Grid, Level);
+        levelGenerator = new LevelGenerator(colorDictionary.mappings, Grid, Level);
         //read levels, incase we make that even easier
         lastDepth = levelGenerator.generate(lastDepth, StartLevel);
         lastDepth = levelGenerator.generate(lastDepth, getFittingLevel());
