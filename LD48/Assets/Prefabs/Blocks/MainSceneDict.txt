@@ -1,0 +1,16 @@
+if alpha == 0: Nothing, else:
+000000 - Bedrock
+7F7F7F - Stone
+A0A0A0 - Greyish Stone
+D0D0D0 - Whitish Stone
+8C3B3B - Redish Stone
+9F9F55 - Gravel
+
+FFFF00 - Valuable
+00FFFF - Very Valuable
+7F0000 - Exploding Stone
+0000FF - Blob Stone
+
+FF0000 - Basic Blob
+FF7F00 - Jumping Blob
+FF3F00 - Either Blob: 50 - 50
