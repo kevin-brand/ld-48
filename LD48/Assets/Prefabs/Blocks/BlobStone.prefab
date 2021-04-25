@@ -47,7 +47,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.7
-  m_Color: {r: 1, g: 0.9600915, b: 0.3066038, a: 1}
+  m_Color: {r: 0.30588233, g: 0.31853706, b: 1, a: 1}
   m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -505,9 +505,9 @@ GameObject:
   - component: {fileID: 8641782035712264868}
   - component: {fileID: 1666222525400963831}
   - component: {fileID: 5505822634804985506}
-  - component: {fileID: 9073604595280319957}
+  - component: {fileID: 4592231696653151393}
   m_Layer: 6
-  m_Name: Valuble
+  m_Name: BlobStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +569,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e10e363188d031a4d8644779efecbcf5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5da65451c29c72548ae0e6d2f80ade75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -606,7 +606,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &9073604595280319957
+--- !u!114 &4592231696653151393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,6 +615,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8222089917763972239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38478e5c1bf3f964c93a0a78b2d99efd, type: 3}
+  m_Script: {fileID: 11500000, guid: 10965f3b434d50541a6d83d506a9ae68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
