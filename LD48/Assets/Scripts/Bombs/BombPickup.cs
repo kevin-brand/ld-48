@@ -33,12 +33,18 @@ public class BombPickup : MonoBehaviour
     public void OnBombOneInput(InputAction.CallbackContext context)
     {
         if (context.started && _playerIsInTriggerRange)
+        {
             _bag.SetBombInSlot(bomb, 0);
+            Destroy(this.gameObject);
+        }
     }
         
     public void OnBombTwoInput(InputAction.CallbackContext context)
     {
         if (context.started && _playerIsInTriggerRange)
+        {
             _bag.SetBombInSlot(bomb, 1);
+            Destroy(this.gameObject);
+        }
     }
 }
