@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -24,7 +24,7 @@ public class HealthManager : MonoBehaviour
         {
             _lastHealth = Player.Health;
             Heart1.sprite = (_lastHealth <= 0) ? Empty : (_lastHealth == 1) ? Half : Full;
-            Heart1.sprite = (_lastHealth <= 2) ? Empty : (_lastHealth == 3) ? Half : Full;
+            Heart2.sprite = (_lastHealth <= 2) ? Empty : (_lastHealth == 3) ? Half : Full;
             Heart3.sprite = (_lastHealth <= 4) ? Empty : (_lastHealth == 5) ? Half : Full;
         }
     }
