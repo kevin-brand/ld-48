@@ -89,7 +89,7 @@ namespace Bombs
             
             foreach (var detonationPosition in _explosionPositions)
             {
-                Collider2D hit = Physics2D.OverlapPoint(detonationPosition, _data.whatIsAffected);
+                Collider2D hit = Physics2D.OverlapCircle(detonationPosition, 0.4f, _data.whatIsAffected);
                 if (hit != null && hit.GetComponent<IDamageable>() != null)
                 {
                     hit.GetComponent<IDamageable>().ReceiveDamage(_data.damage);
