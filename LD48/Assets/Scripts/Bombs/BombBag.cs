@@ -8,27 +8,26 @@ namespace Bombs
     {
         [SerializeField] private Bomb bombPrefab;
         [SerializeField] private BombData defaultBomb;
-        [SerializeField] private BombSlot slotOne;
-        [SerializeField] private BombSlot slotTwo;
+        [SerializeField] private BombSlot[] slots = new BombSlot[2];
         [SerializeField] private LayerMask cantPlaceOn;
         [SerializeField] private float bombCooldown;
 
         private void Awake()
         {
-            slotOne.SetBomb(defaultBomb);
-            slotTwo.SetBomb(defaultBomb);
+            slots[0].SetBomb(defaultBomb);
+            slots[1].SetBomb(defaultBomb);
         }
 
         public void OnBombOneInput(InputAction.CallbackContext context)
         {
             if (context.started)
-                AttemptToPlaceBomb(slotOne);
+                AttemptToPlaceBomb(slots[0]);
         }
         
         public void OnBombTwoInput(InputAction.CallbackContext context)
         {
             if (context.started)
-                AttemptToPlaceBomb(slotTwo);
+                AttemptToPlaceBomb(slots[1]);
         }
 
         private void AttemptToPlaceBomb(BombSlot slot)
@@ -62,6 +61,14 @@ namespace Bombs
             }
             
             return false;
+        }
+
+        public void SetBombInSlot(BombData bomb, int slotIndex)
+        {
+            if (slotIndex < slots.Length)
+            {
+                slots[slotIndex].SetBomb(bomb);
+            }
         }
     }
 }

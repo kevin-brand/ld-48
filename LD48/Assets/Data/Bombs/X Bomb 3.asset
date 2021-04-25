@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45c36c2e914f6c34db07d2006a4a607f, type: 3}
-  m_Name: Cross Bomb 3
+  m_Name: X Bomb 3
   m_EditorClassIdentifier: 
   fuseTime: 3
   damage: 2
