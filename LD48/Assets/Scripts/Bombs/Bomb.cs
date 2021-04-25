@@ -8,7 +8,8 @@ namespace Bombs
 {
     public class Bomb : MonoBehaviour, IDamageable
     {
-        [SerializeField] private BombData debugBombData;
+
+        [SerializeField] private BombData staticBomb;
         [SerializeField] private GameObject warningEffect;
 
         private SpriteRenderer _renderer;
@@ -27,8 +28,11 @@ namespace Bombs
 
         private void Start()
         {
-            if (debugBombData)
-                Place(this.transform.position, debugBombData);
+            if (staticBomb)
+            {
+                _data = staticBomb;
+                _explosionPositions = _data.pattern.GetExplosionPositions(transform.position);
+            }
         }
 
         private void Update()
@@ -73,6 +77,9 @@ namespace Bombs
 
         private void DisplayWarningEffect()
         {
+            if (warningEffect == null)
+                return;
+            
             foreach (var detonationPosition in _explosionPositions)
             {
                 Vector3 detonationWorldPosition = new Vector3(detonationPosition.x, detonationPosition.y, 0);
