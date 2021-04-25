@@ -1516,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7874163735377753122, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
+      propertyPath: cantPlaceOn.m_Bits
+      value: 704
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 910791441869270671, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
@@ -1818,6 +1822,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1926241233, guid: 62f2d609b62cf21498e4fa254c216c94, type: 3}
+      propertyPath: ignoreLayerIndices.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926241233, guid: 62f2d609b62cf21498e4fa254c216c94, type: 3}
+      propertyPath: ignoreLayerIndices.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926241233, guid: 62f2d609b62cf21498e4fa254c216c94, type: 3}
+      propertyPath: ignoreLayerIndices.Array.data[3]
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 634176259853500694, guid: 62f2d609b62cf21498e4fa254c216c94, type: 3}
       propertyPath: m_Name
       value: BasicBlob
