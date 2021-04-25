@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 8641782035712264868}
   - component: {fileID: 1666222525400963831}
   - component: {fileID: 5505822634804985506}
-  - component: {fileID: 1728341790818922847}
+  - component: {fileID: 3563706066378169821}
   m_Layer: 6
   m_Name: ExplosoveStone
   m_TagString: Untagged
@@ -606,7 +606,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1728341790818922847
+--- !u!114 &3563706066378169821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,6 +615,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8222089917763972239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc5929ccf4b4534eb6923ff4c758608, type: 3}
+  m_Script: {fileID: 11500000, guid: 757b335303ccf6944bc304a4d39e871c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugBombData: {fileID: 11400000, guid: da71c5854e6345f489e228f04ebd7dc1, type: 2}
+  warningEffect: {fileID: 6520065896638507188, guid: 6b9db1b5143142144ba96270bf56b456, type: 3}
