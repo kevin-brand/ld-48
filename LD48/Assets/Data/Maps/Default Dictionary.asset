@@ -141,3 +141,8 @@ MonoBehaviour:
     possiblePrefabs:
     - {fileID: 8355007947489377696, guid: dd27f3e32b4dd9c44a4d5607d7c1ef80, type: 3}
     - {fileID: 0}
+  - color: {r: 0, g: 1, b: 0, a: 1}
+    possiblePrefabs:
+    - {fileID: 8625586126165446536, guid: 6bd6156432f5d5342889cbce9f6cb31a, type: 3}
+    - {fileID: 8625586126165446536, guid: 63159cb17d2eeb847a3ab87b3b257010, type: 3}
+    - {fileID: 8625586126165446536, guid: ee604019231491e498917b95208b17a2, type: 3}
