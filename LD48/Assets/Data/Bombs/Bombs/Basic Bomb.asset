@@ -19,6 +19,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 960
   isLimited: 0
-  numberOfBombs: 1
+  numberOfBombs: 9
   timeToDisplayWarningEffectAt: 1
   bombName: Default Bomb
