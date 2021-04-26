@@ -10,6 +10,7 @@ namespace Character
         [SerializeField] private int health = 6;
         [SerializeField] private float invulnerableTime = 0.5f;
         [SerializeField] private float hitStopDuration = 0.2f;
+        [SerializeField] private Color hurtColor = Color.red;
         
         public int Health => health;
 
@@ -18,10 +19,12 @@ namespace Character
         private bool _dead;
 
         private bool _timeStopped = false;
+        private SpriteRenderer _renderer;
 
         private void Awake()
         {
             _controller = GetComponent<Controller>();
+            _renderer = GetComponent<SpriteRenderer>();
         }
 
         private void Start()
@@ -62,7 +65,9 @@ namespace Character
         private IEnumerator Wait()
         {
             _timeStopped = true;
+            _renderer.color = hurtColor;
             yield return new WaitForSecondsRealtime(hitStopDuration);
+            _renderer.color = Color.white;
             Time.timeScale = 1.0f;
             _timeStopped = false;
         }
