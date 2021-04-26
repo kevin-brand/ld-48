@@ -23,10 +23,9 @@ namespace Managers
         // Update is called once per frame
         void Update()
         {
-            if (_source.isPlaying == false)
+            if (!_source.isPlaying)
             {
                 int r = Random.Range(0, 2);
-                Debug.Log(r);
                 switch (_lastAudioIndex)
                 {
                     case 0:

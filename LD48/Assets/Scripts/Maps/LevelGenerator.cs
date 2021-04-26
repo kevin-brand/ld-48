@@ -57,7 +57,6 @@ public class LevelGenerator
         {
             if (CompareColors(entry.color, color))
             {
-                Debug.Log(entry.color);
                 Vector2 vector2 = new Vector2(x, y + offset);
                 try {
                     GameObject.Instantiate(entry.GetRandomPrefab(), vector2, Quaternion.identity, currentLevel.transform);
