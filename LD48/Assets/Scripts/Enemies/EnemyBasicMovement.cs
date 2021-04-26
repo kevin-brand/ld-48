@@ -39,7 +39,7 @@ namespace Enemies
                 Dir *= -1;
             }
             Rigidbody2D.velocity = new Vector2(Dir * speed, Rigidbody2D.velocity.y);
-            transform.localScale = new Vector2(Dir * .7f, .7f);
+            transform.localScale = new Vector2(Dir * transform.localScale.x, transform.localScale.y);
         }
     }
 }

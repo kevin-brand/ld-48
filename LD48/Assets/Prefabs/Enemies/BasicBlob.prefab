@@ -71,8 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  layerIndex: 0
-  ignoreLayerIndices: 00000000060000000700000009000000
   canDetonateBombs: 0
 --- !u!1 &634176259853500694
 GameObject:
@@ -105,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 634176259853500694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.09997389, y: 1.9065398, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 1926241231}
   m_Father: {fileID: 0}
