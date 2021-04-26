@@ -21,4 +21,4 @@ MonoBehaviour:
   isLimited: 0
   numberOfBombs: 1
   timeToDisplayWarningEffectAt: 1
-  sprite: {fileID: 21300000, guid: 6d43402766f287c4aa7eab3902ff3c82, type: 3}
+  sprite: {fileID: 21300000, guid: 0efd1d91f02b94440a9a796f114469e4, type: 3}
