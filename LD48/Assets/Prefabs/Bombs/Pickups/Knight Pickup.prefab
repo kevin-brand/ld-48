@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8625586126165446541}
   - component: {fileID: 8625586126165446542}
   m_Layer: 0
-  m_Name: X Bomb 3 Pickup
+  m_Name: Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3ac4ed6821c1764887ae2e073d175cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 11400000, guid: 239ac0ca4975f3c479ed286caa14542d, type: 2}
+  bomb: {fileID: 11400000, guid: 42ab052333780694db6f317cfefbcda8, type: 2}
   warningEffect: {fileID: 143429301852014594, guid: e74a7d29c33c36940ba1ab1a93aff4c2, type: 3}
 --- !u!1 &8625586127278938534
 GameObject:

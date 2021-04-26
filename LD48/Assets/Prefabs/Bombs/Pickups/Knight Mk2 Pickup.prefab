@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 11400000, guid: 42ab052333780694db6f317cfefbcda8, type: 2}
-  warningEffect: {fileID: 6520065896638507188, guid: 6b9db1b5143142144ba96270bf56b456, type: 3}
+  warningEffect: {fileID: 143429301852014594, guid: e74a7d29c33c36940ba1ab1a93aff4c2, type: 3}
 --- !u!1 &8625586127278938534
 GameObject:
   m_ObjectHideFlags: 0

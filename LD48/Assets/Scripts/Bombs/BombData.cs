@@ -7,7 +7,7 @@ namespace Bombs
     public class BombData : ScriptableObject
     {
         public int fuseTime = 3;
-        public int damage = 1;
+        public int damage = 2;
         public ExplosionPattern pattern;
         public LayerMask whatIsAffected;
 
