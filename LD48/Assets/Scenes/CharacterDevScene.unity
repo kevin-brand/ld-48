@@ -1448,6 +1448,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 617522563553337355, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 617522563553337355, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 910791441869270704, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
       propertyPath: m_Name
       value: Player Character
@@ -1495,6 +1503,10 @@ PrefabInstance:
     - target: {fileID: 910791441869270707, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415132633575616390, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
+      propertyPath: hitStopDuration
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3590619937804351792, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
       propertyPath: m_Color.b

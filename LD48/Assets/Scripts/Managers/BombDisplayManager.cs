@@ -22,11 +22,25 @@ namespace Managers
 
         private void FixedUpdate()
         {
-            bombOneNameText.text = bombBag.GetSlot(0).Bomb.bombName;
-            bombTwoNameText.text = bombBag.GetSlot(1).Bomb.bombName;
+            BombSlot bOne = bombBag.GetSlot(0);
+            BombSlot bTwo = bombBag.GetSlot(1);
+            
+            bombOneNameText.text = bOne.Bomb.bombName;
+            bombTwoNameText.text = bTwo.Bomb.bombName;
 
-            bombOneCounterText.text = bombBag.GetSlot(0).held.ToString();
-            bombTwoCounterText.text = bombBag.GetSlot(1).held.ToString();
+            if (bOne.Bomb.isLimited)
+                bombOneCounterText.text = bOne.held.ToString();
+            else
+            {
+                bombOneCounterText.text = "∞";
+            }
+            
+            if (bTwo.Bomb.isLimited)
+                bombTwoCounterText.text = bTwo.held.ToString();
+            else
+            {
+                bombTwoCounterText.text = "∞";
+            }
         }
     }
 }

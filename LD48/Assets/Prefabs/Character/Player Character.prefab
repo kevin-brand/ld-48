@@ -182,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 6
   invulnerableTime: 0.5
+  hitStopDuration: 0.15
 --- !u!114 &7874163735377753122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +204,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   bombCooldown: 0.25
+  inBombPickupTrigger: 0
 --- !u!50 &910791441869270670
 Rigidbody2D:
   serializedVersion: 4
