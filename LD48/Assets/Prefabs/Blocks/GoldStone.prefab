@@ -619,4 +619,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drop: {fileID: 8007218865042062331, guid: 3e54b39c17e3cfb45a7ff044c64a5e51, type: 3}
-  dropAmount: 6
+  dropAmount: 3
