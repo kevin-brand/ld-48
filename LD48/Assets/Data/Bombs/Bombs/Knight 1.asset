@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c36c2e914f6c34db07d2006a4a607f, type: 3}
   m_Name: Knight 1
   m_EditorClassIdentifier: 
-  fuseTime: 2
+  fuseTime: 1
   damage: 2
   pattern: {fileID: 11400000, guid: 9da27919071922746b2ec4cefe3c979b, type: 2}
   whatIsAffected:

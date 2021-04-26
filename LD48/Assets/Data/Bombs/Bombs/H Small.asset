@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c36c2e914f6c34db07d2006a4a607f, type: 3}
   m_Name: H Small
   m_EditorClassIdentifier: 
-  fuseTime: 3
+  fuseTime: 2
   damage: 2
   pattern: {fileID: 11400000, guid: a086fe66c7968394db0fbb94c0343d2f, type: 2}
   whatIsAffected:

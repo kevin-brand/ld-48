@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6520065896638507190}
   - component: {fileID: 6520065896638507191}
   - component: {fileID: 5125482309274518854}
+  - component: {fileID: 2574241010487257880}
   m_Layer: 0
   m_Name: Bomb Warning
   m_TagString: Untagged
@@ -189,3 +190,17 @@ MonoBehaviour:
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalString: 
+--- !u!114 &2574241010487257880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520065896638507188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbed02ab69206e4dbc90a104b354c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTimeUntilSelfDestruction: 1
+  delayMargin: 0

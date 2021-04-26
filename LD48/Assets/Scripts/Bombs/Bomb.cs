@@ -18,8 +18,9 @@ namespace Bombs
         public GameObject AudioExplosion;
 
         private SpriteRenderer _renderer;
-        private int _fuseTime;
+        private float _fuseTime;
         private bool _ticking = false;
+        private bool _displayedWarningEffects = false;
 
         private bool _hasBeenInitialized = false;
         private bool _exploding = false;
@@ -44,34 +45,20 @@ namespace Bombs
         {
             if(!_hasBeenInitialized)
                 return;
-            
-            if (!_ticking && _fuseTime > 0)
-            {
-                StartCoroutine(Tick());
-            }
-        }
-        
-        private IEnumerator Tick()
-        {
-            _ticking = true;
-            yield return new WaitForSeconds(1);
-            _fuseTime--;
-            
-            //Display Timer here
-            
-            if (_fuseTime == 0)
+
+            _fuseTime -= Time.deltaTime;
+            if (_fuseTime <= 0)
                 Detonate();
             
-            if (_fuseTime == _data.timeToDisplayWarningEffectAt)
+            if (_fuseTime <= 1f)
                 DisplayWarningEffect();
-            
-            _ticking = false;
         }
 
         public void Place(Vector2 position, BombData data)
         {
             _data = data;
             _fuseTime = _data.fuseTime;
+            Debug.Log("Fuse Time: " + _fuseTime);
             
             transform.position = position;
             _explosionPositions = _data.pattern.GetExplosionPositions(position);
@@ -81,14 +68,16 @@ namespace Bombs
 
         private void DisplayWarningEffect()
         {
-            if (warningEffect == null)
+            if (warningEffect == null || _displayedWarningEffects)
                 return;
             
             foreach (var detonationPosition in _explosionPositions)
             {
                 Vector3 detonationWorldPosition = new Vector3(detonationPosition.x, detonationPosition.y, 0);
-                Instantiate(warningEffect, detonationWorldPosition, Quaternion.identity, this.transform);
+                Instantiate(warningEffect, detonationWorldPosition, Quaternion.identity);
             }
+
+            _displayedWarningEffects = true;
         }
 
         private void Detonate()

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c36c2e914f6c34db07d2006a4a607f, type: 3}
   m_Name: Box Bomb 1
   m_EditorClassIdentifier: 
-  fuseTime: 2
+  fuseTime: 1
   damage: 2
   pattern: {fileID: 11400000, guid: 653d053595ef90e4e927be67c3173bf1, type: 2}
   whatIsAffected:
