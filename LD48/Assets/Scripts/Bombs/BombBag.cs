@@ -46,19 +46,21 @@ namespace Bombs
         {
             if (_bombCooldownRemaining > 0) 
                 return;
-            
-            if (slot.held <= 0)
-                slot.SetBomb(defaultBomb);
-            
+
             Vector2 targetLocation = new Vector2();
 
             if (AttemptToGetAndSetNearestValidPlacingPosition(ref targetLocation))
             {
                 Bomb bomb = Instantiate(bombPrefab);
                 bomb.Place(targetLocation, slot.Bomb);
-                
+
                 if (slot.Bomb.isLimited)
+                {
                     slot.held--;
+                    if (slot.held <= 0)
+                        slot.SetBomb(defaultBomb);
+                }
+                    
 
                 _bombCooldownRemaining = bombCooldown;
             }
