@@ -248,6 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitStopDuration: 0.1
 --- !u!82 &2753191536352832075
 AudioSource:
   m_ObjectHideFlags: 0
