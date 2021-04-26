@@ -36,7 +36,6 @@ namespace Bombs.ExplosionPatterns
                     for (int y = 0; y < Pattern.height; y++)
                     {
                         if (CompareColors(Pattern.GetPixel(x, y), Color.black)){
-                            Debug.Log(x + " + " + y);
                             pat.Add(new Vector2(x - h, y - h));
                         }
                     }

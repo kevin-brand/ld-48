@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Managers
 {
@@ -6,6 +7,8 @@ namespace Managers
     {
         public ScoreManager ScoreManager;
         public TMPro.TMP_Text textMeshProGUI;
+
+        public UnityEvent scoreIncreased;
         // Start is called before the first frame update
         void Start()
         {
@@ -15,6 +18,10 @@ namespace Managers
         // Update is called once per frame
         void Update()
         {
+            if (textMeshProGUI.text != ScoreManager.Instance.GetHighscore().ToString())
+            {
+                scoreIncreased.Invoke();
+            }
             textMeshProGUI.text = ScoreManager.Instance.GetHighscore().ToString();
         }
     }
