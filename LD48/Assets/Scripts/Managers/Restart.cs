@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour
+namespace Managers
 {
-    public void OnResetButtonClick()
+    public class Restart : MonoBehaviour
     {
-        SceneManager.LoadScene("Main");
+        public void OnResetButtonClick()
+        {
+            SceneManager.LoadScene("Main");
+        }
     }
 }

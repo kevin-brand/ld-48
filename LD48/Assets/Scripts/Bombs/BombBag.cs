@@ -85,5 +85,7 @@ namespace Bombs
                 slots[slotIndex].SetBomb(bomb);
             }
         }
+
+        public BombSlot GetSlot(int i) => slots[i];
     }
 }
