@@ -14,7 +14,7 @@ public class BombPickup : MonoBehaviour
     private BombBag _bag;
 
     private List<GameObject> _warningEffects = new List<GameObject>();
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<BombBag>())
@@ -37,18 +37,13 @@ public class BombPickup : MonoBehaviour
     
     private void DisplayWarningEffect()
     {
-        if (warningEffect == null)
-            return;
-
         List<Vector2> positions = bomb.pattern.GetExplosionPositions(transform.position);
             
         foreach (var detonationPosition in positions)
         {
-            Debug.Log(detonationPosition.ToString());
-            
             Vector3 detonationWorldPosition = new Vector3(detonationPosition.x, detonationPosition.y, 0);
-            GameObject go = Instantiate(warningEffect, detonationWorldPosition, Quaternion.identity, this.transform) as GameObject;
-            _warningEffects.Add(go);
+            GameObject preview = Instantiate(warningEffect, detonationWorldPosition, Quaternion.identity, this.transform);
+            _warningEffects.Add(preview);
         }
     }
     
@@ -56,10 +51,11 @@ public class BombPickup : MonoBehaviour
     {
         if (warningEffect == null)
             return;
+        
             
-        foreach (var warning in _warningEffects)
+        foreach (var effect in _warningEffects)
         {
-            Destroy(warning);
+            Destroy(effect);
         }
         _warningEffects.Clear();
     }

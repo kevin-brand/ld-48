@@ -1896,21 +1896,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8625586126165446542, guid: ee604019231491e498917b95208b17a2, type: 3}
+      propertyPath: warningEffect
+      value: 
+      objectReference: {fileID: 143429301852014594, guid: e74a7d29c33c36940ba1ab1a93aff4c2, type: 3}
     - target: {fileID: 8625586126165446543, guid: ee604019231491e498917b95208b17a2, type: 3}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8625586126165446543, guid: ee604019231491e498917b95208b17a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.76416063
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8625586126165446543, guid: ee604019231491e498917b95208b17a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0432171
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8625586126165446543, guid: ee604019231491e498917b95208b17a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.235907
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8625586126165446543, guid: ee604019231491e498917b95208b17a2, type: 3}
       propertyPath: m_LocalRotation.w
