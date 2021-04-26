@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45c36c2e914f6c34db07d2006a4a607f, type: 3}
-  m_Name: X Bomb 3
+  m_Name: Fat X Bomb
   m_EditorClassIdentifier: 
   fuseTime: 3
   damage: 2
-  pattern: {fileID: 11400000, guid: 79fc7c27782545546ae6b22a57b19606, type: 2}
+  pattern: {fileID: 11400000, guid: 06f18863f06c87e468592154ad1f052a, type: 2}
   whatIsAffected:
     serializedVersion: 2
     m_Bits: 960
   isLimited: 1
-  numberOfBombs: 5
+  numberOfBombs: 3
   timeToDisplayWarningEffectAt: 1
-  bombName: X
+  bombName: XXX
