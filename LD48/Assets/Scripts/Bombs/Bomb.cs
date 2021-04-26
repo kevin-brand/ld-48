@@ -15,6 +15,7 @@ namespace Bombs
         [SerializeField] private GameObject warningEffect;
         [SerializeField] private GameObject explosionEffect;
         public UnityEvent screenShakeEvent;
+        public GameObject AudioExplosion;
 
         private SpriteRenderer _renderer;
         private int _fuseTime;
@@ -95,6 +96,8 @@ namespace Bombs
             if(_exploding)
                 return;
 
+            Instantiate(AudioExplosion);
+            AudioExplosion.GetComponent<AudioSource>().Play();
             _exploding = true;
             screenShakeEvent.Invoke();
             
