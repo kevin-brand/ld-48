@@ -248,6 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitStopDuration: 0.1
 --- !u!114 &5958242273731958520
 MonoBehaviour:
   m_ObjectHideFlags: 0
