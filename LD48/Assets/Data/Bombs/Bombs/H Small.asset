@@ -21,4 +21,4 @@ MonoBehaviour:
   isLimited: 1
   numberOfBombs: 5
   timeToDisplayWarningEffectAt: 1
-  bombName: Smol H
+  bombName: H

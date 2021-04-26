@@ -19,6 +19,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 960
   isLimited: 1
-  numberOfBombs: 5
+  numberOfBombs: 6
   timeToDisplayWarningEffectAt: 1
   bombName: Small Drill

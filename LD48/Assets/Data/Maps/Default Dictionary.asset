@@ -144,6 +144,10 @@ MonoBehaviour:
   - color: {r: 0, g: 1, b: 0, a: 1}
     possiblePrefabs:
     - {fileID: 8625586126165446536, guid: b866b97dfa4ac3e4d8683dc92dd3a57c, type: 3}
+    - {fileID: 8625586126165446536, guid: e61c30cab4c8aa74e96eb3330b91b40b, type: 3}
+    - {fileID: 8625586126165446536, guid: d06569357a11c5c47875e582c47e9e70, type: 3}
+    - {fileID: 8625586126165446536, guid: e12df25d1ced4b24a94c430c62853303, type: 3}
+    - {fileID: 8625586126165446536, guid: 952dcb173bbc9b84b99412418bf01a20, type: 3}
     - {fileID: 8625586126165446536, guid: 2d81582cfd4bcbb47a1c560781c0779d, type: 3}
     - {fileID: 8625586126165446536, guid: 6026b168211f13448a26ce025984e797, type: 3}
     - {fileID: 8625586126165446536, guid: 668e24b5ed7dce14fb73eed6274dd94b, type: 3}

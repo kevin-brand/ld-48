@@ -19,6 +19,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 960
   isLimited: 1
-  numberOfBombs: 5
+  numberOfBombs: 3
   timeToDisplayWarningEffectAt: 1
-  bombName: Anhohana
+  bombName: Anohana

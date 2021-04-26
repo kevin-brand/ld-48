@@ -21,4 +21,4 @@ MonoBehaviour:
   isLimited: 1
   numberOfBombs: 3
   timeToDisplayWarningEffectAt: 1
-  bombName: XXX
+  bombName: The X

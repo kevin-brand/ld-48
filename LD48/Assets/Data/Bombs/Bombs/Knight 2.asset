@@ -21,4 +21,4 @@ MonoBehaviour:
   isLimited: 1
   numberOfBombs: 2
   timeToDisplayWarningEffectAt: 1
-  bombName: Knight Mk.2
+  bombName: Knight Mk2

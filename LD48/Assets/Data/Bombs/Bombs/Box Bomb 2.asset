@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45c36c2e914f6c34db07d2006a4a607f, type: 3}
-  m_Name: Heart
+  m_Name: Box Bomb 2
   m_EditorClassIdentifier: 
-  fuseTime: 3
-  damage: 3
-  pattern: {fileID: 11400000, guid: 968d4736bb505374482dfa311f7e0064, type: 2}
+  fuseTime: 2
+  damage: 2
+  pattern: {fileID: 11400000, guid: b4e6bac5ed4fdd74b90bd6901384dd7d, type: 2}
   whatIsAffected:
     serializedVersion: 2
     m_Bits: 960
   isLimited: 1
-  numberOfBombs: 1
+  numberOfBombs: 4
   timeToDisplayWarningEffectAt: 1
-  bombName: Heartbreaker
+  bombName: Box Mk2

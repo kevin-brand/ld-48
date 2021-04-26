@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Diamond S Bomb
   m_EditorClassIdentifier: 
   fuseTime: 3
-  damage: 1
+  damage: 2
   pattern: {fileID: 11400000, guid: d245e85e1769fcc4ea441a8c372c5152, type: 2}
   whatIsAffected:
     serializedVersion: 2

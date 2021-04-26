@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Diablo Bomb
   m_EditorClassIdentifier: 
   fuseTime: 3
-  damage: 1
+  damage: 2
   pattern: {fileID: 11400000, guid: 69036fa312258a940a9c03e04570e752, type: 2}
   whatIsAffected:
     serializedVersion: 2

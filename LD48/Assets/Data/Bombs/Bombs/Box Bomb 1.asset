@@ -18,7 +18,7 @@ MonoBehaviour:
   whatIsAffected:
     serializedVersion: 2
     m_Bits: 960
-  isLimited: 0
-  numberOfBombs: 1
+  isLimited: 1
+  numberOfBombs: 6
   timeToDisplayWarningEffectAt: 1
-  sprite: {fileID: 0}
+  bombName: Box Mk1
