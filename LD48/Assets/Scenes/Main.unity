@@ -1906,6 +1906,13 @@ MonoBehaviour:
   - {fileID: 2800000, guid: db7faad44f03dfa438c6fed5e9db1e87, type: 3}
   - {fileID: 2800000, guid: 00621bf762b62c14b9c8007a745bc267, type: 3}
   - {fileID: 2800000, guid: ca85e45271330b34db6c596480479dcb, type: 3}
+  - {fileID: 2800000, guid: d35483c5bac041649a81f16cfb0c8e99, type: 3}
+  - {fileID: 2800000, guid: f1778b1dbb0e5dd49b933cfe09982181, type: 3}
+  - {fileID: 2800000, guid: a43396bae2777674e939a1a9f6891298, type: 3}
+  - {fileID: 2800000, guid: 9e4ce5c09bf3ae441a146c24c876c6ea, type: 3}
+  - {fileID: 2800000, guid: 2c0b808e04efa1f4285780d7fdfa32e1, type: 3}
+  - {fileID: 2800000, guid: 99861fe309cfeca47b4441e318192b9f, type: 3}
+  - {fileID: 2800000, guid: f8a29c01105a47a42ad29a13afc04ba1, type: 3}
   difficultyIncreaseAt: 0
   colorDictionary: {fileID: 11400000, guid: 8b4df613f6de3674c848ddb171e10ad9, type: 2}
   Grid: {fileID: 1658951317}
@@ -2976,7 +2983,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7776427, y: 1}
+    m_SensorSize: {x: 1.7779605, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
