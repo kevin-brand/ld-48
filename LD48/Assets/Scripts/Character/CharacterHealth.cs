@@ -14,7 +14,7 @@ namespace Character
         private float _invulnerableTimeRemaining = 0f;
         private Controller _controller;
         private bool _dead;
-        
+
         private void Awake()
         {
             _controller = GetComponent<Controller>();

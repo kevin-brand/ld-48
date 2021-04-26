@@ -12,6 +12,8 @@ namespace Bombs
         [SerializeField] private LayerMask cantPlaceOn;
         [SerializeField] private float bombCooldown = 0.5f;
 
+        public bool inBombPickupTrigger = false;
+
         private float _bombCooldownRemaining = 0f;
 
         private void Awake()
@@ -22,13 +24,13 @@ namespace Bombs
 
         public void OnBombOneInput(InputAction.CallbackContext context)
         {
-            if (context.started)
+            if (context.started && !inBombPickupTrigger)
                 AttemptToPlaceBomb(slots[0]);
         }
         
         public void OnBombTwoInput(InputAction.CallbackContext context)
         {
-            if (context.started)
+            if (context.started && !inBombPickupTrigger)
                 AttemptToPlaceBomb(slots[1]);
         }
 

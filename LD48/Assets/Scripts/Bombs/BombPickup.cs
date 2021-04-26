@@ -22,6 +22,7 @@ public class BombPickup : MonoBehaviour
             DisplayWarningEffect();
             _playerIsInTriggerRange = true;
             _bag = other.GetComponent<BombBag>();
+            _bag.inBombPickupTrigger = true;
         }
     }
 
@@ -31,6 +32,7 @@ public class BombPickup : MonoBehaviour
         {
             RemoveWarningEffect();
             _playerIsInTriggerRange = false;
+            _bag.inBombPickupTrigger = false;
             _bag = null;
         }
     }
@@ -65,7 +67,7 @@ public class BombPickup : MonoBehaviour
         if (context.started && _playerIsInTriggerRange)
         {
             _bag.SetBombInSlot(bomb, 0);
-            Destroy(this.gameObject);
+            StartCoroutine(DestroyAfterDelay());
         }
     }
         
@@ -74,7 +76,14 @@ public class BombPickup : MonoBehaviour
         if (context.started && _playerIsInTriggerRange)
         {
             _bag.SetBombInSlot(bomb, 1);
-            Destroy(this.gameObject);
+            StartCoroutine(DestroyAfterDelay());
+
         }
+    }
+
+    private IEnumerator DestroyAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(0.02f);
+        Destroy(this.gameObject);
     }
 }
