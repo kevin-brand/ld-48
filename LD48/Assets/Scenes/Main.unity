@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &28311012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7874163735377753122, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
+  m_PrefabInstance: {fileID: 477619197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a450073111d59944b46b952ab596c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &61557502
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +282,7 @@ GameObject:
   - component: {fileID: 90889079}
   - component: {fileID: 90889083}
   - component: {fileID: 90889084}
+  - component: {fileID: 90889085}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -400,6 +412,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreManager: {fileID: 1825595924}
   textMeshProGUI: {fileID: 1772087512}
+--- !u!114 &90889085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90889078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d34de6c34a20e144a4f7f3a2e1d8974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombBag: {fileID: 28311012}
+  bombOneNameText: {fileID: 567820357}
+  bombTwoNameText: {fileID: 508992570}
 --- !u!1 &187407362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1043,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1489026094979580933, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1476fefd2cd1f294ca4db323b293ae68, type: 3}
 --- !u!1 &508992568
@@ -1052,8 +1083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 286.80063, y: -1.4999514}
-  m_SizeDelta: {x: 426.6646, y: 47}
+  m_AnchoredPosition: {x: 330.0522, y: -1.4999514}
+  m_SizeDelta: {x: 513.1677, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508992570
 MonoBehaviour:
@@ -2372,7 +2403,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777403, y: 1}
+    m_SensorSize: {x: 1.7773334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

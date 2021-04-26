@@ -15,6 +15,6 @@ namespace Bombs
         public int numberOfBombs;
 
         public int timeToDisplayWarningEffectAt = 1;
-        public Sprite sprite;
+        public string bombName = "Default Bomb";
     }
 }

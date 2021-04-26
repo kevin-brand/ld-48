@@ -21,4 +21,4 @@ MonoBehaviour:
   isLimited: 0
   numberOfBombs: 1
   timeToDisplayWarningEffectAt: 1
-  sprite: {fileID: 21300000, guid: 0efd1d91f02b94440a9a796f114469e4, type: 3}
+  bombName: Default Bomb
