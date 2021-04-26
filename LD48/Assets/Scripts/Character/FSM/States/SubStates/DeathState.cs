@@ -10,6 +10,7 @@ namespace Character.FSM.States.SubStates
 
         public override void Enter()
         {
+            Controller.PlaySound("death");
             base.Enter();
             Debug.Log("I dieded");
         }

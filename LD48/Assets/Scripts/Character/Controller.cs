@@ -17,6 +17,12 @@ namespace Character
         public Vector2 CurrentVelocity { get; private set; }
         public int FacingDirection { get; private set; }
 
+        // Julian's lazy sound properties
+        public AudioSource SoundStep;
+        public AudioSource SoundJump;
+        public AudioSource SoundHurt;
+        public AudioSource SoundDeath;
+
 
         // Ground States
         public IdleState IdleState { get; private set; }
@@ -94,7 +100,29 @@ namespace Character
             if (xInput != 0 && xInput != FacingDirection)
                 Flip();
         }
-        
+
+        public void PlaySound(string sound)
+        {
+            switch (sound)
+            {
+                case "step":
+                    SoundStep.Play();
+                    break;
+                case "jump":
+                    SoundJump.Play();
+                    break;
+                case "hurt":
+                    SoundHurt.Play();
+                    break;
+                case "death":
+                    SoundDeath.Play();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
         private void Flip()
         {
             FacingDirection *= -1;

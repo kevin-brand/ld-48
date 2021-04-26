@@ -12,6 +12,7 @@ namespace Character.FSM.States.SubStates
         {
             base.Enter();
             Controller.SetVelocityY(MovementData.jumpVelocity);
+            Controller.PlaySound("jump");
             StateMachine.ChangeState(Controller.AirState);
         }
 
